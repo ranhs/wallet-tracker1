@@ -1,4 +1,5 @@
 // const path = require('path');
+const fs = require('fs');
 const express = require('express');
 // //const plugins = require('./src/server/plugin');
 // var cors = require('cors');
@@ -39,7 +40,8 @@ var app = express();
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/', function(req, res) {
-  res.send('Hi');
+  const s = path.join(__dirname + '/dist/wallet-tracker1/index.html');
+  res.send('Hi' + " trying to read file from " + s + "does file exists? " + fs.existsSync(s));
   //res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
 });
 
