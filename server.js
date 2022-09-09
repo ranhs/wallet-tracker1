@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 //const plugins = require('./src/server/plugin');
-var cors = require('cors');
+// var cors = require('cors');
 
 const port = process.env.PORT || 8080;
 
