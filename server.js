@@ -36,13 +36,11 @@ var app = express();
 
 // // plugins.plugin(app);
 
-// // For all GET requests, send back index.html
-// // so that PathLocationStrategy can be used
+// For all GET requests, send back index.html
+// so that PathLocationStrategy can be used
 app.get('/', function(req, res) {
-  const p = path.join(__dirname + '/dist/wallet-tracker1/index.html');
-  console.log("trying to read", p);
-  console.log(File.exists(p))
-  res.sendFile(p);
+  res.send('Hi');
+  //res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
 });
 
 
