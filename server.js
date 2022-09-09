@@ -21,13 +21,13 @@ var app = express();
 //   }
 // }
 
-// // Instruct the app
-// // to use the forceSSL
-// // middleware
-// if ( port == 8080 )
-//   app.use(cors());
-// else
-//   app.use(forceSSL());
+// Instruct the app
+// to use the forceSSL
+// middleware
+if ( port == 8080 )
+  app.use(cors());
+else
+  app.use(forceSSL());
 
 // Run the app by serving the static files
 // in the dist directory
