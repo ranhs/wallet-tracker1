@@ -38,19 +38,14 @@ var app = express();
 
 // // For all GET requests, send back index.html
 // // so that PathLocationStrategy can be used
-// app.get('/', function(req, res) {
-//   res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
-// });
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
+});
 
 
 // app.get('/login', function(req, res) {
 //     res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
 //   });
-
-app.all('/', (req, res) => {
-    console.log("Just got a request!")
-    res.send('Yo!')
-})
 
 // // Start the app by listening on the default port
 app.listen(process.env.PORT || 3000)
