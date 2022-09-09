@@ -30,9 +30,9 @@ var app = express();
 // else
 //   app.use(forceSSL());
 
-// // Run the app by serving the static files
-// // in the dist directory
-// app.use(express.static(__dirname + '/dist/wallet-tracker1/'));
+// Run the app by serving the static files
+// in the dist directory
+app.use(express.static(__dirname + '/dist/wallet-tracker1/'));
 
 
 // // plugins.plugin(app);
@@ -40,8 +40,6 @@ var app = express();
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/', function(req, res) {
-  //const s = path.join(__dirname + '/dist/wallet-tracker1/index.html');
-  //res.send('Hi' + " trying to read file from " + s + "does file exists? " + fs.existsSync(s));
   res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
 });
 
