@@ -1,8 +1,7 @@
 const path = require('path');
-const fs = require('fs');
 const express = require('express');
 //const plugins = require('./src/server/plugin');
-var cors = require('cors');
+//var cors = require('cors');
 
 const port = process.env.PORT || 8080;
 
@@ -43,11 +42,11 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
 });
 
-app.get('/login', function(req, res) {
-    res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
-  });
+// app.get('/login', function(req, res) {
+//     res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
+//   });
 
 // Start the app by listening on the default port
 app.listen(port);
-console.log(`listenning on port ${port}`);
+// console.log(`listenning on port ${port}`);
   
