@@ -40,9 +40,9 @@ var app = express();
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/', function(req, res) {
-  const s = path.join(__dirname + '/dist/wallet-tracker1/index.html');
-  res.send('Hi' + " trying to read file from " + s + "does file exists? " + fs.existsSync(s));
-  //res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
+  //const s = path.join(__dirname + '/dist/wallet-tracker1/index.html');
+  //res.send('Hi' + " trying to read file from " + s + "does file exists? " + fs.existsSync(s));
+  res.sendFile(path.join(__dirname + '/dist/wallet-tracker1/index.html'));
 });
 
 
