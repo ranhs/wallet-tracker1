@@ -4,7 +4,7 @@ const express = require('express');
 // //const plugins = require('./src/server/plugin');
 // var cors = require('cors');
 
-// const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 
 var app = express();
 // // If an incoming request uses
@@ -49,7 +49,7 @@ app.get('/', function(req, res) {
 //   });
 
 // // Start the app by listening on the default port
-app.listen(process.env.PORT || 3000)
+app.listen(port)
 // app.listen(port);
 // console.log(`listenning on port ${port}`);
   
