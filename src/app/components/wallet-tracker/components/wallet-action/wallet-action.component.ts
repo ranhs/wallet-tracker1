@@ -21,8 +21,8 @@ export class WalletActionComponent implements OnInit {
   // @Output() public cancel: EventEmitter<any> = new EventEmitter<any>();
   public isOpened: boolean;
   public transEdited: WalletTransaction = null as never;
-  private baseValue: number = 0;
-  private transId: number = 0;
+  private baseValue: number = null as never;
+  private transId: number= null as never;
   public minDate: Date;
   public maxDate: Date;
   public date: Date = null as never;

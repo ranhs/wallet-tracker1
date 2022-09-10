@@ -9,8 +9,8 @@ import { LoginInfoService, UserInfo } from './services/login-info.service';
 export class LoginComponent implements OnInit {
 
   constructor(private loginInfoService : LoginInfoService) { }
-  public name : string = '';
-  public currentName : string = '';
+  public name : string = null as never;
+  public currentName : string = null as never;
 
   ngOnInit() {
     this.name = this.currentName = this.loginInfoService.name;

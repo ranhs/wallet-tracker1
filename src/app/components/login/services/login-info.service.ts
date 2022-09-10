@@ -2,16 +2,16 @@ import { Injectable, OnInit } from "@angular/core";
 
 @Injectable()
 export class LoginInfoService {
-    private currentName : string = '';
-    private users : {[key: string] :  UserInfo} = {};
+    private currentName : string = null as never;
+    private users : {[key: string] :  UserInfo} = null as never;
 
     constructor() {
         this.load();
     }
 
     public load() {
-        this.users = JSON.parse(localStorage.getItem("wallet-users-info") as string);
-        this.currentName = localStorage.getItem("waller-user-name") as string;
+        this.users = JSON.parse(localStorage.getItem("wallet-users-info") as never);
+        this.currentName = localStorage.getItem("waller-user-name") as never;
         if ( !this.users || Object.keys(this.users).length == 0 ) {
             let host = localStorage.getItem("wallet-host") || "host";
             let user = localStorage.getItem("wallet-user") || "user";
@@ -124,8 +124,8 @@ export class LoginInfoService {
 }
 
 export class UserInfo {
-    public host: string = '';
-    public user: string = '';
-    public password: string = '';
-    public database: string = '';
+    public host: string = null as never;
+    public user: string = null as never;
+    public password: string = null as never;
+    public database: string = null as never;
 }
