@@ -1,0 +1,42 @@
+@import '../../../../../styles/colors';
+
+.wallet-table {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+
+  &-row {
+    display: grid;
+    grid-template-columns: auto 70px;
+    padding: 10px 15px;
+    border-bottom: $border-color 2px solid;
+
+    &.--selected {
+      background-color: $highlight-white-color;
+    }
+
+    // TODO: reorganize this: don't use native element selector ..
+    span {
+      display: block;
+    }
+
+    &__date {
+      font-size: 18px;
+    }
+
+    &__title {
+      font-size: 22px;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    &__sum {
+      font-size: 25px;
+      color: #d33c2d;
+
+      &.--positive {
+        color: #007236;
+      }
+    }
+  }
+}

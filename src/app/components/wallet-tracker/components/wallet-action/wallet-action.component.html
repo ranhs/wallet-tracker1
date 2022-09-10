@@ -1,0 +1,26 @@
+<div *ngIf="isOpened">
+
+    <div class="action-row" style="padding-top: 10px; padding-bottom: 10px;">
+        <div style="grid-column-start: 2; font-size: 22px; text-align: left;">
+            <span>יתרה: </span>
+            <span dir="ltr">{{total}}</span>
+        </div>
+    </div>
+    <div class="action-row">
+        <div class="action-row__label">
+            תאריך
+        </div>
+       <date-editor [(ngModel)]="date" [min]="minDate" [max]="maxDate"></date-editor>
+    </div>
+
+    <currency-input [(ngModel)]="valueChange"></currency-input>
+
+    <div class="action-row">
+        <div class="action-row__label">
+            עבור
+        </div>
+        <div> 
+            <input [(ngModel)]="description" type="text" placeholder="על מה שולם?" style="width: 100%">
+        </div>
+    </div>
+</div>

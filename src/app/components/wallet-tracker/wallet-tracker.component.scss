@@ -1,0 +1,21 @@
+@import '../../../styles/colors';
+
+:host {
+  //height: 100vh;
+  display: grid;
+  grid-template-rows: 57px calc(100vh - 2*57px) 57px;
+
+  .top-bar {
+    background-color: $primary-color;
+    color: $white-text-color;
+    padding: 15px 30px;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.7) 0 0 8px;
+
+    &__right {
+        color: $white-text-color;
+    }
+  }
+}

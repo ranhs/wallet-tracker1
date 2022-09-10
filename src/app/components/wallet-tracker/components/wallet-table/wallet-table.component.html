@@ -1,0 +1,16 @@
+<ul class="wallet-table">
+    <li class="wallet-table-row"
+        *ngFor="let transaction of actionManager.transactionList"
+        [class.--selected]="actionManager.selected_id == transaction.id"
+        (click)="selectTransaction(transaction)">
+        <div>
+            <span class="wallet-table-row__title"> {{ transaction.description }} </span>
+            <span class="wallet-table-row__date"> {{ transaction.displayDate }} </span>
+        </div>
+        <div class="h-ltr">
+      <span class="wallet-table-row__sum"
+            [class.--positive]="transaction.value > 0"> {{ transaction.displayValue }} </span>
+            <span> {{ transaction.total }} </span>
+        </div>
+    </li>
+</ul>

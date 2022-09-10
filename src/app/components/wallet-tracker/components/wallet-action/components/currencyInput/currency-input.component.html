@@ -1,0 +1,20 @@
+<!-- <div dir="ltr">
+   <td class="sign" (click)="onSignClicked()"><span [class] = "(minus)?'minus':'plus'">{{sign}}</span></td>
+   <td class="number"><input [class] = "(minus)?'minus':'plus'" [(ngModel)]="value" (keypress)="onKeyPress($event)"></td>
+</div> -->
+
+<div id="value-input" class="h-ltr" [class.--positive] = "!minus">
+    <div style="position: relative;">
+        <input type="text" [ngModel]="value" (ngModelChange)="valuechange($event)" inputmode="numeric" (keypress)="onKeyPress($event);" (focus)="onFocus()" (focusout)="onFocusOut()">
+        <!--Here I use a 'trick' where I bind the value to a different span element, than I can check its lenght with jQuery-->
+        <span id="length-reference" >{{value}}</span>
+        <span id="currency-symbol" [style.left]="inputLength +'px'">&#8362;</span>
+    </div>
+    <div class="switch" (click)="onSignClicked()">
+        <div class="switch-front">
+            <span class="positive-text">+</span>
+            <span class="negetive-text">-</span>
+        </div>
+    </div>
+
+</div>

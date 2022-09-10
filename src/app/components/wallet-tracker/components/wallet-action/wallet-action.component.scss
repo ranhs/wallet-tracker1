@@ -1,0 +1,21 @@
+:host {
+  overflow: hidden;
+  background-color: #ebebeb;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 8px;
+
+  .action-row {
+    display: grid;
+    grid-template-columns: 100px auto;
+    padding: 20px 10px;
+    margin: 0 10px;
+    text-align: right;
+    direction: rtl;
+    border-bottom: #e1e1e1 3px solid;
+
+    .action-row__label {
+      font-weight: bold;
+      font-size: 25px;
+      margin-top: -3px;
+    }
+  }
+}

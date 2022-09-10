@@ -1,0 +1,26 @@
+<button class="wt-btn --success"
+        *ngIf="showAdd"
+        (click)="buttonService.add.click()">
+    {{buttonService.add.text}}
+</button>
+<button class="wt-btn"
+        *ngIf="showEdit"
+        (click)="buttonService.edit.click()">
+    {{buttonService.edit.text}}
+</button>
+<button class="wt-btn --danger"
+        *ngIf="showRemove"
+        (click)="buttonService.remove.click()">
+    {{buttonService.remove.text}}
+</button>
+
+<button class="wt-btn"
+        *ngIf="showSave"
+        (click)="buttonService.save.click()">
+    {{buttonService.save.text}}
+</button>
+<button class="wt-btn --secondary"
+        *ngIf="showCancel"
+        (click)="buttonService.cancel.click()">
+    {{buttonService.cancel.text}}
+</button>

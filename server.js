@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-//const plugins = require('./src/server/plugin');
+const plugins = require('./src/server/plugin');
 const cors = require('cors');
 
 const port = process.env.PORT || 8080;
@@ -34,7 +34,7 @@ else
 app.use(express.static(__dirname + '/dist/wallet-tracker1/'));
 
 
-// plugins.plugin(app);
+plugins.plugin(app);
 
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used

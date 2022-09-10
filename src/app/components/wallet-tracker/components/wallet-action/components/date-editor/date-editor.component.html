@@ -1,0 +1,13 @@
+<div style="font-size: 22px"
+     class="outer">
+  <span class="date-str">{{dateStr}}</span>
+  <div class="data-editor__button-container">
+    <button class="data-editor__button"
+            style="margin-right: 20px"
+            [disabled]="!upEnabled"
+            (click)="upClicked()"><i class="fas fa-chevron-up"></i></button>
+    <button class="data-editor__button"
+            [disabled]="!downEnabled"
+            (click)="downClicked()"><i class="fas fa-chevron-down"></i></button>
+  </div>
+</div>

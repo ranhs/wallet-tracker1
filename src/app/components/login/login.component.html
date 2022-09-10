@@ -1,0 +1,61 @@
+<div id="container">
+  <!--app header-->
+  <div id="header" class="banner">
+    Login Details
+    <a href="/" class="link">Login</a>
+  </div>
+
+    <div class="action-row">
+        <div class="action-row__label">
+            Name
+        </div>
+        <div> 
+            <select [(ngModel)]="currentName" (change)="onNameSelected()">
+                <option *ngFor="let _userName of names" value="{{_userName}}">{{_userName}}</option>
+                <option value="add">add</option>
+            </select>
+            <input [(ngModel)]="name" type="text" style="width: 100%" (change)="onNameChanged()">
+        </div>
+    </div>
+        
+
+  <div class="action-row">
+    <div class="action-row__label">
+        Host
+    </div>
+    <div> 
+        <input [(ngModel)]="host" type="text" style="width: 100%">
+    </div>
+  </div>
+
+  <div class="action-row">
+    <div class="action-row__label">
+        User
+    </div>
+    <div> 
+        <input [(ngModel)]="user" type="text" style="width: 100%">
+    </div>
+  </div>
+
+  <div class="action-row">
+    <div class="action-row__label">
+        Password
+    </div>
+    <div> 
+        <input [(ngModel)]="password" type="password" style="width: 100%">
+    </div>
+  </div>
+
+  <div class="action-row">
+    <div class="action-row__label">
+        Database
+    </div>
+    <div> 
+        <input [(ngModel)]="database" type="text" style="width: 100%">
+    </div>
+  </div>
+
+  <div id="buttons">
+    <button class="save" (click)="onSaveClicked()">Save</button>
+  </div>
+</div>

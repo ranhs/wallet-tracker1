@@ -1,0 +1,86 @@
+#value-input{
+    background-color: #e1e1e1;
+    display: grid;
+    grid-template-columns: auto 105px ;
+    padding: 20px;
+    position: relative;
+
+    #length-reference, input{
+        position: absolute;
+    }
+    #length-reference{
+        opacity: 0;
+        font-size: 40px;
+        z-index: -1;
+    }
+    input{
+        text-align: left;
+        direction: ltr;
+        float: left;
+
+        font-size: 40px;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+
+        color: #0072bc; //cursor color
+        text-shadow: 0px 0px 0px #d33c2d; //text-color
+        -webkit-text-fill-color: transparent;
+    }
+    input:focus{
+        outline-width: 0;
+    }
+    #currency-symbol{
+        color: #d33c2d;
+        font-size: 30px;
+        position: absolute;
+        left: 50px;
+        padding-top: 8px; margin-left: 3px;
+    }
+
+    .switch {
+        width: 50px;
+        height: 25px;
+        border-radius: 3px;
+        background-color: rgb(237, 28, 36);
+        margin: 10px 0;
+        margin-left: 50px;
+
+        .switch-front{
+            display: inline-block;
+            width: 22px;
+            height: 23px;
+            margin: 1px;
+            border-radius: 2px;
+            background-color: rgb(246, 246, 246);
+            text-align: center;
+        }
+
+        .positive-text{
+            display: none;
+        }
+    }
+
+}
+#value-input.--positive{
+    input{
+        text-shadow: 0px 0px 0px rgb(0, 114, 54); //text-color
+    }
+    #currency-symbol{
+        color: rgb(0, 114, 54);
+    }
+    .switch{
+        background-color: rgb(0, 114, 54);
+
+        .switch-front{
+            float: right;
+        }
+
+        .negetive-text{
+            display: none;
+        }
+        .positive-text{
+            display: inline-block;
+        }
+    }
+}

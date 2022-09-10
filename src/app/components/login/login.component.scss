@@ -1,0 +1,64 @@
+#container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 57px auto auto;
+
+    .link {
+        float: right;
+    }
+
+    .banner{
+        background-color: #0072bc;
+        color: #e1e1e1;
+        padding: 15px 30px;
+        box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 8px;
+        text-align: left; 
+        //position: fixed;
+        //width: 100vw;
+    }
+    .banner#header{
+        //top: 0;
+        height: 23px;
+    }
+    #buttons{
+        display: block;
+        grid-template-columns: auto auto;
+        direction: ltr;
+
+        button{
+            color: #ebebeb;
+            border: none;
+            padding: 12px;
+            font-size: 22px;
+            width: 100%;
+        }
+        button:focus{
+            outline-width: 0;
+        }
+        button.save{
+            background-color: #00a651;
+        }
+        button.save:focus{
+            background-color: #008c44;
+        }
+
+    }
+    .action-row{
+        display: block;
+        grid-template-columns: 100px auto;
+        padding: 20px 10px;
+        margin: 0 10px;
+        text-align: left;
+        direction: ltr;
+        border-bottom: #e1e1e1 3px solid;
+
+        .action-row__label{
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: -3px;
+        }
+
+
+    }
+
+}
